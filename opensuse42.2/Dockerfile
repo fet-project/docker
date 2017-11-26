@@ -31,7 +31,8 @@ RUN rpm -qa --qf "%{NAME}\n" > /opt/packages-image.txt && \
      libqt5-qtbase-devel \
      make \
      sudo && \
-    ln -s /usr/bin/qmake-qt5 /usr/local/bin/qmake && \
+    ln -s /usr/bin/qmake-qt5 /usr/local/bin/qmake && \ 
+    ln -s /usr/lib64 /usr/lib/x86_64-linux-gnu && \
     zypper -q clean -a # ${DATE}
 
 USER fet
